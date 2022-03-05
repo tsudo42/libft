@@ -7,6 +7,7 @@ RM		:= rm -f
 
 ## ************************************************************************** ##
 
+SRCS += $(SRCS_APULONG)
 SRCS_APULONG	:= \
 	apulong/ft_apulong_add.c \
 	apulong/ft_apulong_cmp.c \
@@ -17,10 +18,12 @@ SRCS_APULONG	:= \
 	apulong/ft_apulong_str.c \
 	apulong/ft_apulong_pow.c \
 
+SRCS += $(SRCS_EXIT)
 SRCS_EXIT		:= \
 	exit/ft_exit.c \
 	exit/ft_wrapped_malloc.c \
 
+SRCS += $(SRCS_CHAR)
 SRCS_CHAR		:= \
 	char/ft_isalnum.c \
 	char/ft_isalpha.c \
@@ -30,6 +33,7 @@ SRCS_CHAR		:= \
 	char/ft_tolower.c \
 	char/ft_toupper.c \
 
+SRCS += $(SRCS_PRINTF)
 SRCS_PRINTF		:= \
 	ft_printf/ft_printf_bonus.c \
 	ft_printf/ft_printf.c \
@@ -46,9 +50,11 @@ SRCS_PRINTF		:= \
 	ft_printf/ftpf_type_bonus.c \
 	ft_printf/ftpf_write_bonus.c \
 
+SRCS += $(SRCS_GNL)
 SRCS_GNL		:= \
 	get_next_line/get_next_line.c \
 
+SRCS += $(SRCS_INT)
 SRCS_INT		:= \
 	int/ft_atoi.c \
 	int/ft_heapify_int.c \
@@ -59,6 +65,7 @@ SRCS_INT		:= \
 	int/ft_numstrcmp.c \
 	int/ft_unbrlen.c \
 
+SRCS += $(SRCS_LIST)
 SRCS_LIST		:= \
 	list/ft_lstadd_back.c \
 	list/ft_lstadd_front.c \
@@ -70,6 +77,7 @@ SRCS_LIST		:= \
 	list/ft_lstnew.c \
 	list/ft_lstsize.c \
 
+SRCS += $(SRCS_MEM)
 SRCS_MEM		:= \
 	mem/ft_bzero.c \
 	mem/ft_calloc.c \
@@ -80,12 +88,14 @@ SRCS_MEM		:= \
 	mem/ft_memset.c \
 	mem/ft_realloc.c \
 
+SRCS += $(SRCS_PUT)
 SRCS_PUT		:= \
 	put/ft_putchar_fd.c \
 	put/ft_putendl_fd.c \
 	put/ft_putnbr_fd.c \
 	put/ft_putstr_fd.c \
 
+SRCS += $(SRCS_STRING)
 SRCS_STRING		:= \
 	string/ft_split.c \
 	string/ft_strchr.c \
@@ -105,18 +115,6 @@ SRCS_STRING		:= \
 	string/ft_trimnl.c \
 
 ## ************************************************************************** ##
-
-SRCS	:= \
-	$(SRCS_APULONG) \
-	$(SRCS_CHAR) \
-	$(SRCS_EXIT) \
-	$(SRCS_GNL) \
-	$(SRCS_INT) \
-	$(SRCS_LIST) \
-	$(SRCS_MEM) \
-	$(SRCS_PRINTF) \
-	$(SRCS_PUT) \
-	$(SRCS_STRING) \
 
 OBJS	= $(patsubst %.c,objs/%.o, $(notdir $(SRCS)))
 DEPS	= $(OBJS:.o=.d)
