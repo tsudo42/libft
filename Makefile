@@ -15,7 +15,8 @@ SRCS_APULONG	:= \
 	apulong/ft_apulong_mul.c \
 	apulong/ft_apulong_pow.c \
 	apulong/ft_apulong_str.c \
-	apulong/ft_apulong_pow.c
+	apulong/ft_apulong_pow.c \
+
 SRCS_CHAR		:= \
 	char/ft_isalnum.c \
 	char/ft_isalpha.c \
@@ -23,7 +24,8 @@ SRCS_CHAR		:= \
 	char/ft_isdigit.c \
 	char/ft_isprint.c \
 	char/ft_tolower.c \
-	char/ft_toupper.c
+	char/ft_toupper.c \
+
 SRCS_PRINTF		:= \
 	ft_printf/ft_printf_bonus.c \
 	ft_printf/ft_printf.c \
@@ -38,15 +40,21 @@ SRCS_PRINTF		:= \
 	ft_printf/ftpf_out_string_bonus.c \
 	ft_printf/ftpf_out_unsigned_bonus.c \
 	ft_printf/ftpf_type_bonus.c \
-	ft_printf/ftpf_write_bonus.c
+	ft_printf/ftpf_write_bonus.c \
+
 SRCS_GNL		:= \
-	get_next_line/get_next_line.c
+	get_next_line/get_next_line.c \
+
 SRCS_INT		:= \
 	int/ft_atoi.c \
+	int/ft_heapify_int.c \
+	int/ft_heapsort_int.c \
+	int/ft_isintstr.c \
 	int/ft_itoa.c \
 	int/ft_nbrlen.c \
 	int/ft_numstrcmp.c \
-	int/ft_unbrlen.c
+	int/ft_unbrlen.c \
+
 SRCS_LIST		:= \
 	list/ft_lstadd_back.c \
 	list/ft_lstadd_front.c \
@@ -56,7 +64,8 @@ SRCS_LIST		:= \
 	list/ft_lstlast.c \
 	list/ft_lstmap.c \
 	list/ft_lstnew.c \
-	list/ft_lstsize.c
+	list/ft_lstsize.c \
+
 SRCS_MEM		:= \
 	mem/ft_bzero.c \
 	mem/ft_calloc.c \
@@ -65,12 +74,14 @@ SRCS_MEM		:= \
 	mem/ft_memcpy.c \
 	mem/ft_memmove.c \
 	mem/ft_memset.c \
-	mem/ft_realloc.c
+	mem/ft_realloc.c \
+
 SRCS_PUT		:= \
 	put/ft_putchar_fd.c \
 	put/ft_putendl_fd.c \
 	put/ft_putnbr_fd.c \
-	put/ft_putstr_fd.c
+	put/ft_putstr_fd.c \
+
 SRCS_STRING		:= \
 	string/ft_split.c \
 	string/ft_strchr.c \
@@ -78,6 +89,7 @@ SRCS_STRING		:= \
 	string/ft_striteri.c \
 	string/ft_strjoin.c \
 	string/ft_strlcat.c \
+	string/ft_strlcpy.c \
 	string/ft_strlen.c \
 	string/ft_strmapi.c \
 	string/ft_strncmp.c \
@@ -85,7 +97,8 @@ SRCS_STRING		:= \
 	string/ft_strnstr.c \
 	string/ft_strrchr.c \
 	string/ft_strtrim.c \
-	string/ft_substr.c
+	string/ft_substr.c \
+	string/ft_trimnl.c \
 
 ## ************************************************************************** ##
 
@@ -93,7 +106,7 @@ SRCS	:= \
 	$(SRCS_APULONG) \
 	$(SRCS_CHAR) \
 	$(SRCS_GNL) \
-	$((SRCS_INT) \
+	$(SRCS_INT) \
 	$(SRCS_LIST) \
 	$(SRCS_MEM) \
 	$(SRCS_PRINTF) \
@@ -127,4 +140,5 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
+
 ## ************************************************************************** ##
