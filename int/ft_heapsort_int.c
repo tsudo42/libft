@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 13:34:04 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/05 16:26:25 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/05 16:48:06 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ static void	ft_downheap_helper(int *lst, int size)
 void	ft_heapsort_int(int *lst, int size)
 {
 	int	tmp;
-	int	i;
 
 	if (size <= 0)
 		return ;
