@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_exit.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 18:48:24 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/05 19:39:24 by tsudo            ###   ##########        */
+/*   Created: 2022/03/05 19:37:27 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/05 19:40:42 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_EXIT_H
+# define FT_EXIT_H
 
-# include "ft_apulong.h"
-# include "ft_char.h"
-# include "ft_exit.h"
-# include "ft_int.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_printf.h"
+# include <stdlib.h>
 # include "ft_put.h"
-# include "ft_string.h"
-# include "get_next_line.h"
 
-#endif /* LIBFT_H */
+void	ft_exit(int exit_no, char *err_msg);
+void	*ft_wrapped_malloc(size_t size, int exit_no, char *err_msg);
+
+#endif /* FT_EXIT_H */

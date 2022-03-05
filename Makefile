@@ -8,7 +8,7 @@ RM		:= rm -f
 ## ************************************************************************** ##
 
 SRCS_APULONG	:= \
-	./apulong/ft_apulong_add.c \
+	apulong/ft_apulong_add.c \
 	apulong/ft_apulong_cmp.c \
 	apulong/ft_apulong_cpy.c \
 	apulong/ft_apulong_div10.c \
@@ -16,6 +16,10 @@ SRCS_APULONG	:= \
 	apulong/ft_apulong_pow.c \
 	apulong/ft_apulong_str.c \
 	apulong/ft_apulong_pow.c \
+
+SRCS_EXIT		:= \
+	exit/ft_exit.c \
+	exit/ft_wrapped_malloc.c \
 
 SRCS_CHAR		:= \
 	char/ft_isalnum.c \
@@ -105,16 +109,18 @@ SRCS_STRING		:= \
 SRCS	:= \
 	$(SRCS_APULONG) \
 	$(SRCS_CHAR) \
+	$(SRCS_EXIT) \
 	$(SRCS_GNL) \
 	$(SRCS_INT) \
 	$(SRCS_LIST) \
 	$(SRCS_MEM) \
 	$(SRCS_PRINTF) \
 	$(SRCS_PUT) \
-	$(SRCS_STRING)
+	$(SRCS_STRING) \
+
 OBJS	= $(patsubst %.c,objs/%.o, $(notdir $(SRCS)))
 DEPS	= $(OBJS:.o=.d)
-VPATH	:= apulong:char:ft_printf:get_next_line:int:list:mem:put:string
+vpath %.c $(sort $(dir $(SRCS)))
 
 ## ************************************************************************** ##
 
