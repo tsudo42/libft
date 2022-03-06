@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 17:45:54 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 18:32:49 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/06 20:30:10 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,28 @@
 /* ************************************************************************** */
 char	*ft_strtok(char *str, const char *sep)
 {
-	static char	*next;
+	static char	*remnant;
 	char		*tmp;
 	size_t		i;
 
-	if (str == NULL && next == NULL)
+	if (str == NULL && remnant == NULL)
 		return (NULL);
-	if (next == NULL || str != NULL)
-		next = str;
-	next += ft_strspn(next, sep);
-	i = ft_strcspn(next, sep);
-	if (next[0] == '\0' || next[i] == '\0')
+	if (remnant == NULL || str != NULL)
+		remnant = str;
+	remnant += ft_strspn(remnant, sep);
+	i = ft_strcspn(remnant, sep);
+	if (remnant[0] == '\0')
 	{
-		next = NULL;
+		remnant = NULL;
 		return (NULL);
 	}
-	next[i - 1] = '\0';
-	tmp = next;
-	next += i;
+	tmp = remnant;
+	if (remnant[i] == '\0')
+		remnant = NULL;
+	else
+	{
+		remnant[i] = '\0';
+		remnant += i + 1;
+	}
 	return (tmp);
 }
