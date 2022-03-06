@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:38:45 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 16:02:05 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/06 15:16:38 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /*  This function puts string s into file descriptor fd.                      */
 /*  If s is NULL, prints "(null)" because the puts() function does so.        */
 /* ************************************************************************** */
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	i;
 
