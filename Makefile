@@ -6,7 +6,7 @@
 #    By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 23:50:57 by tsudo             #+#    #+#              #
-#    Updated: 2022/03/05 23:51:10 by tsudo            ###   ##########         #
+#    Updated: 2022/03/06 18:25:03 by tsudo            ###   ##########         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,6 +112,7 @@ SRCS += $(SRCS_STRING)
 SRCS_STRING		:= \
 	srcs/string/ft_split.c \
 	srcs/string/ft_strchr.c \
+	srcs/string/ft_strcspn.c \
 	srcs/string/ft_strdup.c \
 	srcs/string/ft_striteri.c \
 	srcs/string/ft_strjoin.c \
@@ -123,6 +124,8 @@ SRCS_STRING		:= \
 	srcs/string/ft_strnlen.c \
 	srcs/string/ft_strnstr.c \
 	srcs/string/ft_strrchr.c \
+	srcs/string/ft_strspn.c \
+	srcs/string/ft_strtok.c \
 	srcs/string/ft_strtrim.c \
 	srcs/string/ft_substr.c \
 	srcs/string/ft_trimnl.c \
