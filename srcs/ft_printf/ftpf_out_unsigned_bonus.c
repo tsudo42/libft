@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 22:02:53 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 17:48:05 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/08 17:35:35 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,21 @@ static uintmax_t	ftpf_unsigned_getarg(t_ftpf *param)
 	return (u);
 }
 
+static void	ftpf_unsigned_countlen_helper(uintmax_t u, int base, t_ftpf *param)
+{
+	t_ftpf_conv	*conv;
+
+	conv = param->conv;
+	if (u == 0 && conv->precision == 0 && \
+		(*(param->fmt) != 'o' || !(conv->flags & FTPF_HASH)))
+		conv->datalen = 0;
+	conv->zeropadlen = conv->precision - conv->datalen;
+	if (conv->flags & FTPF_HASH && base == 8)
+		conv->zeropadlen--;
+	if (conv->zeropadlen < 0)
+		conv->zeropadlen = 0;
+}
+
 static void	ftpf_unsigned_countlen(uintmax_t u, int base, t_ftpf *param)
 {
 	t_ftpf_conv	*conv;
@@ -56,13 +71,7 @@ static void	ftpf_unsigned_countlen(uintmax_t u, int base, t_ftpf *param)
 	conv->datalen = ft_unbrlen(u, base);
 	if (conv->flags & FTPF_DOT)
 	{
-		if (u == 0 && conv->precision == 0 && !(conv->flags & FTPF_HASH))
-			conv->datalen = 0;
-		conv->zeropadlen = conv->precision - conv->datalen;
-		if (conv->flags & FTPF_HASH && base == 8)
-			conv->zeropadlen--;
-		if (conv->zeropadlen < 0)
-			conv->zeropadlen = 0;
+		ftpf_unsigned_countlen_helper(u, base, param);
 	}
 	spacepadlen_tmp = conv->minfield - \
 		(conv->prefixlen + conv->zeropadlen + conv->datalen);

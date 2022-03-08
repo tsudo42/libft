@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:39:16 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 16:11:03 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/08 17:37:16 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,7 @@ static void	ftpf_parse(t_ftpf *param)
 			param->fmt++;
 			if (*(param->fmt) == '\0')
 				break ;
-			else if (*(param->fmt) != '%')
-				ftpf_convert(param);
-			else
-			{
-				ftpf_write(param->fmt, 1, param);
-				param->fmt++;
-			}
+			ftpf_convert(param);
 		}
 		else
 		{

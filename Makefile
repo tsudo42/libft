@@ -6,7 +6,7 @@
 #    By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 23:50:57 by tsudo             #+#    #+#              #
-#    Updated: 2022/03/06 18:25:03 by tsudo            ###   ##########         #
+#    Updated: 2022/03/08 17:38:11 by tsudo            ###   ##########         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS_APULONG	:= \
 	srcs/apulong/ft_apulong_mul.c \
 	srcs/apulong/ft_apulong_pow.c \
 	srcs/apulong/ft_apulong_str.c \
-	srcs/apulong/ft_apulong_pow.c \
+	srcs/apulong/ft_apulong_val.c \
 
 SRCS += $(SRCS_EXIT)
 SRCS_EXIT		:= \
