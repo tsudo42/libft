@@ -6,7 +6,7 @@
 #    By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 23:50:57 by tsudo             #+#    #+#              #
-#    Updated: 2022/03/08 17:38:11 by tsudo            ###   ##########         #
+#    Updated: 2022/03/10 18:03:19 by tsudo            ###   ##########         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,7 @@ SRCS += $(SRCS_MEM)
 SRCS_MEM		:= \
 	srcs/mem/ft_bzero.c \
 	srcs/mem/ft_calloc.c \
+	srcs/mem/ft_free_set.c \
 	srcs/mem/ft_memchr.c \
 	srcs/mem/ft_memcmp.c \
 	srcs/mem/ft_memcpy.c \
