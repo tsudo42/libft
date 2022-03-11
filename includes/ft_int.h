@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 16:13:01 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/05 23:34:44 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/11 16:07:19 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 int		ft_atoi(const char *str);
 void	ft_heapify_int(int *lst, int size);
 void	ft_heapsort_int(int *lst, int size);
+int		ft_index(int key, int *arr, int size);
 int		ft_isintstr(const char *str);
 char	*ft_itoa(int n);
 size_t	ft_lowerbound_int(int key, int *sorted_arr, size_t size);

@@ -6,7 +6,7 @@
 #    By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 23:50:57 by tsudo             #+#    #+#              #
-#    Updated: 2022/03/10 18:03:19 by tsudo            ###   ##########         #
+#    Updated: 2022/03/11 16:07:49 by tsudo            ###   ##########         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRCS_INT		:= \
 	srcs/int/ft_atoi.c \
 	srcs/int/ft_heapify_int.c \
 	srcs/int/ft_heapsort_int.c \
+	srcs/int/ft_index.c \
 	srcs/int/ft_isintstr.c \
 	srcs/int/ft_itoa.c \
 	srcs/int/ft_lowerbound_int.c \
