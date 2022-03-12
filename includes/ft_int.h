@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 16:13:01 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/11 16:07:19 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/12 14:47:42 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_itoa(int n);
 size_t	ft_lowerbound_int(int key, int *sorted_arr, size_t size);
 size_t	ft_nbrlen(intmax_t n, int base);
 int		ft_numstrcmp(const char *s1, const char *s2);
-void	ft_shrinkarr_int(int *arr, int *sorted_arr, int size);
+int		ft_shrinkarr_int(int *arr, int *sorted_arr, int size);
 size_t	ft_unbrlen(uintmax_t n, unsigned int base);
 
 #endif /* FT_INT_H */
