@@ -6,7 +6,7 @@
 #    By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 23:50:57 by tsudo             #+#    #+#              #
-#    Updated: 2022/03/11 16:07:49 by tsudo            ###   ##########         #
+#    Updated: 2022/03/14 16:01:42 by tsudo            ###   ##########         #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS += $(SRCS_EXIT)
 SRCS_EXIT		:= \
 	srcs/exit/ft_exit.c \
 	srcs/exit/ft_wrapped_malloc.c \
+	srcs/exit/ft_wrapped_puts.c \
 
 SRCS += $(SRCS_CHAR)
 SRCS_CHAR		:= \

@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wrapped_malloc.c                                :+:      :+:    :+:   */
+/*   ft_wrapped_puts.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 13:50:51 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/14 15:56:33 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/14 16:03:25 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_exit.h"
 
-void	*ft_wrapped_malloc(size_t size, int exit_no, const char *err_msg)
+int	ft_wrapped_puts(const char *s, int exit_no, const char *err_msg)
 {
-	void	*ptr;
+	size_t	len;
+	int		tmp;
+	int		ret;
 
-	ptr = malloc(size);
-	if (ptr == NULL)
+	ret = 0;
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	while (len > INT_MAX)
+	{
+		tmp = write(1, s, INT_MAX);
+		if (tmp <= 0)
+			ft_exit(exit_no, err_msg);
+		s += tmp;
+		len -= tmp;
+		ret += tmp;
+	}
+	tmp = write(1, s, len);
+	if (tmp < (int)len)
 		ft_exit(exit_no, err_msg);
-	return (ptr);
+	return (ret + tmp);
 }
