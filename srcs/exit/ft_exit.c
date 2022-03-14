@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 13:51:27 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/14 15:56:36 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/14 17:52:00 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_exit(int exit_no, const char *err_msg)
 {
-	ft_putendl_fd(err_msg, 2);
+	if (err_msg != NULL)
+		ft_putendl_fd(err_msg, 2);
 	exit(exit_no);
 }
