@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 13:50:51 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/14 16:03:25 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/15 13:24:32 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 int	ft_wrapped_puts(const char *s, int exit_no, const char *err_msg)
 {
-	size_t	len;
-	int		tmp;
-	int		ret;
+	const char	*nul = "(null)";
+	size_t		len;
+	int			tmp;
+	int			ret;
 
+	if (s == NULL)
+		s = nul;
 	ret = 0;
 	len = 0;
 	while (s[len] != '\0')
@@ -32,7 +35,7 @@ int	ft_wrapped_puts(const char *s, int exit_no, const char *err_msg)
 		ret += tmp;
 	}
 	tmp = write(1, s, len);
-	if (tmp < (int)len)
+	if (tmp < (int)len || write(1, "\n", 1) < 1)
 		ft_exit(exit_no, err_msg);
 	return (ret + tmp);
 }
