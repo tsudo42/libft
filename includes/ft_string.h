@@ -22,6 +22,7 @@ size_t	ft_strcspn(const char *s, const char *charset);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin3(const char *s1, const char *s2, const char *s3);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);

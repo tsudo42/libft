@@ -120,6 +120,7 @@ SRCS_STRING		:= \
 	srcs/string/ft_strdup.c \
 	srcs/string/ft_striteri.c \
 	srcs/string/ft_strjoin.c \
+	srcs/string/ft_strjoin3.c \
 	srcs/string/ft_strlcat.c \
 	srcs/string/ft_strlcpy.c \
 	srcs/string/ft_strlen.c \
