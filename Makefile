@@ -12,8 +12,13 @@
 
 NAME	:= libft.a
 CC		:= gcc
-CFLAGS	:= -Wall -Wextra -Werror
+CFLAGS	:= -Wall -Wextra -Werror -MMD -MP
+AR		:= ar rc
 RM		:= rm -f
+
+ifeq ($(DEBUG), 1)
+CFLAGS	+= -g3 -fsanitize=address
+endif
 
 # **************************************************************************** #
 
@@ -135,35 +140,52 @@ SRCS_STRING		:= \
 	srcs/string/ft_substr.c \
 	srcs/string/ft_trimnl.c \
 
+INCS	:= \
+	includes \
+
 # **************************************************************************** #
 
-OBJS	= $(patsubst %.c,objs/%.o, $(notdir $(SRCS)))
+OBJDIR	= objs/
+OBJS	= $(patsubst %.c,$(OBJDIR)%.o, $(notdir $(SRCS)))
 DEPS	= $(OBJS:.o=.d)
+CFLAGS	+= $(addprefix -I,$(INCS))
 vpath %.c $(sort $(dir $(SRCS)))
 
+GR	= \033[32;1m
+RE	= \033[31;1m
+YE	= \033[33;1m
+CY	= \033[36;1m
+RC	= \033[0m
+
 # **************************************************************************** #
 
-$(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+$(NAME): $(OBJDIR) $(OBJS)
+	@printf "\n$(GR)=== Compiled [$(CC) $(CFLAGS)] ===\n--- $(notdir $(SRCS))$(RC)\n"
+	@$(AR) $(NAME) $(OBJS)
+	@printf "$(CY)~~~ Archived [$(AR)] ~~~\n--- $(NAME)$(RC)\n"
 
-.PHONY: all
 all: $(NAME)
 
 -include $(DEPS)
 
-objs/%.o: %.c
-	$(CC) $(CFLAGS) -c -MMD -MP -I includes/ -o $@ $<
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 
-.PHONY: clean
+$(OBJDIR)%.o: %.c
+	@mkdir -p $(OBJDIR)
+	@$(CC) $(CFLAGS) -c -o $@ $<
+	@printf "$(GR)+$(RC)"
+
 clean:
-	$(RM) $(OBJS)
-	$(RM) $(DEPS)
+	@printf "$(RE)--- Removing $(OBJDIR)$(RC)\n"
+	@$(RM) -r $(OBJDIR)
 
-.PHONY: fclean
 fclean: clean
-	$(RM) $(NAME)
+	@printf "$(RE)--- Removing $(NAME)$(RC)\n"
+	@$(RM) $(NAME)
 
-.PHONY: re
 re: fclean all
+
+.PHONY: all clean fclean re
 
 # **************************************************************************** #
