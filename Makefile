@@ -120,6 +120,7 @@ SRCS_PUT		:= \
 SRCS += $(SRCS_STRING)
 SRCS_STRING		:= \
 	srcs/string/ft_split.c \
+	srcs/string/ft_split_sep.c \
 	srcs/string/ft_strchr.c \
 	srcs/string/ft_strcspn.c \
 	srcs/string/ft_strdup.c \
@@ -134,6 +135,7 @@ SRCS_STRING		:= \
 	srcs/string/ft_strnlen.c \
 	srcs/string/ft_strnstr.c \
 	srcs/string/ft_strrchr.c \
+	srcs/string/ft_strsep.c \
 	srcs/string/ft_strspn.c \
 	srcs/string/ft_strtok.c \
 	srcs/string/ft_strtrim.c \

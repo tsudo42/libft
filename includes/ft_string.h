@@ -17,6 +17,7 @@
 # include <limits.h>
 
 char	**ft_split(char const *s, char c);
+char	**ft_split_sep(const char *s, const char *sep);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strcspn(const char *s, const char *charset);
 char	*ft_strdup(const char *s1);
@@ -31,6 +32,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strsep(char **stringp, const char *delim);
 size_t	ft_strspn(const char *s, const char *charset);
 char	*ft_strtok(char *str, const char *sep);
 char	*ft_strtrim(char const *s1, char const *set);
