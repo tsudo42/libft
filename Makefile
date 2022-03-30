@@ -35,6 +35,7 @@ SRCS_APULONG	:= \
 
 SRCS += $(SRCS_EXIT)
 SRCS_EXIT		:= \
+	srcs/exit/ft_error_exit.c \
 	srcs/exit/ft_exit.c \
 	srcs/exit/ft_wrapped_malloc.c \
 	srcs/exit/ft_wrapped_puts.c \
