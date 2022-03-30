@@ -71,6 +71,7 @@ SRCS += $(SRCS_GNL)
 SRCS_GNL		:= \
 	srcs/get_next_line/get_next_line.c \
 	srcs/get_next_line/get_next_line_easy.c \
+	srcs/get_next_line/gnl_ignore_ctrl_d.c \
 
 SRCS += $(SRCS_INT)
 SRCS_INT		:= \
