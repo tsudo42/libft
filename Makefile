@@ -165,7 +165,8 @@ RC	= \033[0m
 # **************************************************************************** #
 
 $(NAME): $(OBJDIR) $(OBJS)
-	@printf "\n$(GR)=== Compiled [$(CC) $(CFLAGS)] ===\n--- $(notdir $(SRCS))$(RC)\n"
+	@printf "\n$(GR)=== Compiled [$(CC) $(CFLAGS)] ==="
+	@printf "\n--- $(notdir $(SRCS))$(RC)\n"
 	@$(AR) $(NAME) $(OBJS)
 	@printf "$(CY)~~~ Archived [$(AR)] ~~~\n--- $(NAME)$(RC)\n"
 
