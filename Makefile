@@ -51,6 +51,7 @@ SRCS_CHAR		:= \
 	srcs/char/ft_isprint.c \
 	srcs/char/ft_isspace.c \
 	srcs/char/ft_isupper.c \
+	srcs/char/ft_isxdigit.c \
 	srcs/char/ft_tolower.c \
 	srcs/char/ft_toupper.c \
 
@@ -90,6 +91,8 @@ SRCS_INT		:= \
 	srcs/int/ft_nbrlen.c \
 	srcs/int/ft_numstrcmp.c \
 	srcs/int/ft_shrinkarr_int.c \
+	srcs/int/ft_strtol.c \
+	srcs/int/ft_strtoul.c \
 	srcs/int/ft_unbrlen.c \
 
 SRCS += $(SRCS_LIST)
