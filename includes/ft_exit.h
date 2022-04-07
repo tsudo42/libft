@@ -18,9 +18,11 @@
 # include <limits.h>
 # include "ft_put.h"
 
-void	ft_exit(int exit_no, const char *err_msg);
-void	ft_error_exit(int exit_no, const char *msg_prefix, int errno);
-void	*ft_wrapped_malloc(size_t size, int exit_no, const char *err_msg);
-int		ft_wrapped_puts(const char *s, int exit_no, const char *err_msg);
+void		ft_exit(int exit_no, const char *err_msg);
+void		ft_error_exit(int exit_no, const char *msg_prefix, int errno);
+const char	*ft_validate_file_ext(const char *filepath, const char *ext, \
+	const char *errmsg_pref);
+void		*ft_wrapped_malloc(size_t size, int exit_no, const char *err_msg);
+int			ft_wrapped_puts(const char *s, int exit_no, const char *err_msg);
 
 #endif /* FT_EXIT_H */
