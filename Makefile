@@ -47,7 +47,10 @@ SRCS_CHAR		:= \
 	srcs/char/ft_isalpha.c \
 	srcs/char/ft_isascii.c \
 	srcs/char/ft_isdigit.c \
+	srcs/char/ft_islower.c \
 	srcs/char/ft_isprint.c \
+	srcs/char/ft_isspace.c \
+	srcs/char/ft_isupper.c \
 	srcs/char/ft_tolower.c \
 	srcs/char/ft_toupper.c \
 

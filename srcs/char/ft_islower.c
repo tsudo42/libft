@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char.h                                          :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 15:46:06 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 15:50:04 by tsudo            ###   ##########        */
+/*   Created: 2022/04/07 00:00:00 by tsudo             #+#    #+#             */
+/*   Updated: 2022/04/07 00:00:00 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CHAR_H
-# define FT_CHAR_H
+#include "ft_char.h"
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_islower(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
-int	ft_isupper(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-
-#endif /* FT_CHAR_H */
+/* ************************************************************************** */
+/*  This function returns if #arg1 is an lower-case alphabet.                 */
+/* ************************************************************************** */
+int	ft_islower(int c)
+{
+	if ('a' <= c && c <= 'z')
+		return (1);
+	return (0);
+}
