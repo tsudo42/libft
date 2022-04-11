@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put.h                                           :+:      :+:    :+:   */
+/*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 16:01:07 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 15:16:51 by tsudo            ###   ##########        */
+/*   Created: 2022/03/11 16:05:29 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/11 16:21:24 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUT_H
-# define FT_PUT_H
+#include "ft_int.h"
 
-# include "stdlib.h"
-# include "unistd.h"
+/* ************************************************************************** */
+/* ************************************************************************** */
+int	ft_index(int key, int *arr, int size)
+{
+	int	i;
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-
-#endif /* FT_PUT_H */
+	i = 0;
+	while (i < size)
+	{
+		if (key == arr[i])
+			return (i);
+		i++;
+	}
+	return (-1);
+}

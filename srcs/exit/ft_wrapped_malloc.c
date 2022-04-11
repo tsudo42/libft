@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put.h                                           :+:      :+:    :+:   */
+/*   ft_wrapped_malloc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 16:01:07 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 15:16:51 by tsudo            ###   ##########        */
+/*   Created: 2022/03/04 13:50:51 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/14 15:56:33 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUT_H
-# define FT_PUT_H
+#include "ft_exit.h"
 
-# include "stdlib.h"
-# include "unistd.h"
+void	*ft_wrapped_malloc(size_t size, int exit_no, const char *err_msg)
+{
+	void	*ptr;
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-
-#endif /* FT_PUT_H */
+	ptr = malloc(size);
+	if (ptr == NULL)
+		ft_exit(exit_no, err_msg);
+	return (ptr);
+}

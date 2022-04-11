@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 17:38:45 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 16:02:05 by tsudo            ###   ##########        */
+/*   Created: 2022/04/07 00:00:00 by tsudo             #+#    #+#             */
+/*   Updated: 2022/04/07 00:00:00 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_put.h"
+#include "ft_char.h"
 
 /* ************************************************************************** */
-/*  This function puts string s into file descriptor fd.                      */
-/*  If s is NULL, prints "(null)" because the puts() function does so.        */
+/*  This function returns if #arg1 is an upper-case alphabet.                 */
 /* ************************************************************************** */
-void	ft_putstr_fd(char *s, int fd)
+int	ft_isupper(int c)
 {
-	size_t	i;
-
-	if (s == NULL)
-	{
-		write(fd, "(null)", 6);
-		return ;
-	}
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (i >= 10000000L)
-		{
-			write(fd, s, 10000000L);
-			s += i;
-			i = 0;
-		}
-		i++;
-	}
-	if (i != 0)
-		write(fd, s, i);
+	if ('A' <= c && c <= 'Z')
+		return (1);
+	return (0);
 }

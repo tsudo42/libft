@@ -43,6 +43,14 @@ typedef struct s_gnl_buf
 	size_t	size;
 }	t_gnl_buf;
 
+/* Normal get_next_line. Can handle multiple fd at the same time. */
+/* Also, able to handle binary inputs. */
 char	*get_next_line(int fd);
+
+/* Mandetory part of get_next_line. */
+char	*get_next_line_easy(int fd);
+
+/* GNL but ignores Ctrl+D. */
+char	*gnl_ignore_ctrl_d(int fd);
 
 #endif /* GET_NEXT_LINE_H */

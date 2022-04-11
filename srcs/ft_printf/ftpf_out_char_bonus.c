@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 22:18:59 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 17:47:52 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/08 17:01:30 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,16 @@ void	ftpf_out_char(t_ftpf *param)
 	ftpf_char_countlen(param);
 	if (*(param->fmt) == 'C')
 		param->conv->length = FTPF_LONG;
-	if (param->conv->length == FTPF_LONG || param->conv->length == FTPF_LLONG)
+	if (*(param->fmt) != '%' && \
+		(param->conv->length == FTPF_LONG || param->conv->length == FTPF_LLONG))
 	{
 		ftpf_wc(param);
 		return ;
 	}
-	c = va_arg(param->args, int);
+	if (*(param->fmt) != '%')
+		c = va_arg(param->args, int);
+	else
+		c = '%';
 	if (!(param->conv->flags & FTPF_MINUS))
 		ftpf_putpad(' ', param->conv->spacepadlen, param);
 	ftpf_putpad('0', param->conv->zeropadlen, param);

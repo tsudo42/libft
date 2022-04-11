@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put.h                                           :+:      :+:    :+:   */
+/*   ft_error_exit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 16:01:07 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 15:16:51 by tsudo            ###   ##########        */
+/*   Created: 2022/03/04 13:51:27 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/14 17:52:00 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUT_H
-# define FT_PUT_H
+#include "ft_exit.h"
 
-# include "stdlib.h"
-# include "unistd.h"
+void	ft_error_exit(int exit_no, const char *msg_prefix, int errno)
+{
+	const char	*err_msg;
+	int			save_errno;
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-
-#endif /* FT_PUT_H */
+	save_errno = errno;
+	if (msg_prefix != NULL)
+		ft_putstr_fd(msg_prefix, STDERR_FILENO);
+	err_msg = strerror(save_errno);
+	if (err_msg != NULL)
+		ft_putendl_fd(err_msg, STDERR_FILENO);
+	exit(exit_no);
+}

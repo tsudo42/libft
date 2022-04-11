@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put.h                                           :+:      :+:    :+:   */
+/*   ft_free_set.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 16:01:07 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 15:16:51 by tsudo            ###   ##########        */
+/*   Created: 2022/03/10 18:01:20 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/10 18:02:53 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUT_H
-# define FT_PUT_H
+#include "ft_mem.h"
 
-# include "stdlib.h"
-# include "unistd.h"
-
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-
-#endif /* FT_PUT_H */
+/* ************************************************************************** */
+/*  This function frees '*ptr' and after that '*ptr' is set to 'set'          */
+/* ************************************************************************** */
+void	*ft_free_set(void **ptr, void *set)
+{
+	if (ptr == NULL)
+		return (NULL);
+	free(*ptr);
+	*ptr = set;
+	return (*ptr);
+}

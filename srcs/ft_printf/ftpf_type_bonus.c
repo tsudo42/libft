@@ -6,7 +6,7 @@
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 08:55:40 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 17:48:07 by tsudo            ###   ##########        */
+/*   Updated: 2022/03/08 16:49:57 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ftpf_type(t_ftpf *param)
 {
 	if (*(param->fmt) == '\0')
 		return ;
-	else if (ft_strchr("cC", *(param->fmt)) != NULL)
+	else if (ft_strchr("cC%", *(param->fmt)) != NULL)
 		ftpf_out_char(param);
 	else if (ft_strchr("sS", *(param->fmt)) != NULL)
 		ftpf_out_string(param);

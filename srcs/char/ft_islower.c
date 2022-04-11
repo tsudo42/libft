@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put.h                                           :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 16:01:07 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/06 15:16:51 by tsudo            ###   ##########        */
+/*   Created: 2022/04/07 00:00:00 by tsudo             #+#    #+#             */
+/*   Updated: 2022/04/07 00:00:00 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUT_H
-# define FT_PUT_H
+#include "ft_char.h"
 
-# include "stdlib.h"
-# include "unistd.h"
-
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-
-#endif /* FT_PUT_H */
+/* ************************************************************************** */
+/*  This function returns if #arg1 is an lower-case alphabet.                 */
+/* ************************************************************************** */
+int	ft_islower(int c)
+{
+	if ('a' <= c && c <= 'z')
+		return (1);
+	return (0);
+}

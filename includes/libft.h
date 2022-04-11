@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 17:42:08 by tsudo             #+#    #+#             */
-/*   Updated: 2022/03/04 16:01:44 by tsudo            ###   ##########        */
+/*   Created: 2022/03/04 18:48:24 by tsudo             #+#    #+#             */
+/*   Updated: 2022/03/05 19:39:24 by tsudo            ###   ##########        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_put.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-/* ************************************************************************** */
-/*  This function puts string s followed by newline into file descriptor fd.  */
-/* ************************************************************************** */
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
-}
+# include "ft_apulong.h"
+# include "ft_char.h"
+# include "ft_exit.h"
+# include "ft_int.h"
+# include "ft_list.h"
+# include "ft_mem.h"
+# include "ft_printf.h"
+# include "ft_put.h"
+# include "ft_string.h"
+# include "get_next_line.h"
+
+#endif /* LIBFT_H */
