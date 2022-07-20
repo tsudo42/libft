@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_exit.h"
+#include <limits.h>
+#include <unistd.h>
 
 int	ft_wrapped_puts(const char *s, int exit_no, const char *err_msg)
 {

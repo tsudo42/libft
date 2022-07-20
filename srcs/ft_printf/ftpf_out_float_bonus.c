@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_string.h"
 
 static void	ftpf_out_float1(t_ftpf_float *fl, char type, t_ftpf *param);
 static void	ftpf_out_floatg(t_ftpf_float *fl, char type, t_ftpf *param);

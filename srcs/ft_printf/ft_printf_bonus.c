@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_mem.h"
 
 static void	ftpf_convert(t_ftpf *param)
 {

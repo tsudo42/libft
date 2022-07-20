@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_put.h"
+#include <unistd.h>
 
 /* ************************************************************************** */
 /*  This function puts number represented by n into file descriptor fd.       */

@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_string.h"
 
 /* ____<buf[0]><buf[1]>...<buf[e0]><DOT><buf[e0+1]>...<buf[e0+precision]>____ */
 /* <buf> := <buf[0]><buf[1]><buf[2]><buf[3]>...<buf[len-1]><buf[len]=='\0'>   */

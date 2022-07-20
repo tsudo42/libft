@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_int.h"
+#include "ft_mem.h"
+#include <stdlib.h>
 
 int	ft_shrinkarr_int(int *arr, int *sorted_arr, int size)
 {

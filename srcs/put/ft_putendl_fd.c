@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_put.h"
+#include <unistd.h>
 
 /* ************************************************************************** */
 /*  This function puts string s followed by newline into file descriptor fd.  */

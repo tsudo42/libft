@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "ft_mem.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 static char	*gnl_ignore_ctrl_d_helper(int fd, char *buf, size_t bufsize)
 {

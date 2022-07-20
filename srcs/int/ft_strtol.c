@@ -12,6 +12,7 @@
 
 #include "ft_int.h"
 #include <errno.h>
+#include "ft_char.h"
 
 /* ************************************************************************** */
 /*  Determine base if base is 0(automatically configured), and read prefix.   */

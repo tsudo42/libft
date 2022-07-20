@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This helper function creates the front of a new list of results from      */

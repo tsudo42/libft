@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_string.h"
+#include <limits.h>
+#include <stdarg.h>
+#include <unistd.h>
 
 static int	ft_ret_handler(ssize_t val, int reset)
 {

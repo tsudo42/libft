@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_exit.h"
+#include "ft_put.h"
+#include <unistd.h>
 
 static void	wrong_file_extension(const char *filepath, const char *errmsg_pref)
 {

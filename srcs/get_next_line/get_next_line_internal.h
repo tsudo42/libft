@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_internal.h                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,19 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_INTERNAL_H
+# define GET_NEXT_LINE_INTERNAL_H
 
-# include <stddef.h>
+# include "get_next_line.h"
+# include <limits.h>
 
-/* Normal get_next_line. Can handle multiple fd at the same time. */
-/* Also, able to handle binary inputs. */
-char	*get_next_line(int fd);
+# ifdef BUFFER_SIZE
+#  if BUFFER_SIZE <= 0
+#   error "invalid BUFFER_SIZE"
+#  endif
+# else
+/* #  warning "BUFFER_SIZE not defined: define as 42" */
+#  define BUFFER_SIZE 42
+# endif /* BUFFER_SIZE */
 
-/* Mandetory part of get_next_line. */
-char	*get_next_line_easy(int fd);
+# ifndef FD_MAX
+#  ifdef OPEN_MAX
+#   define FD_MAX OPEN_MAX
+#  endif /* OPEN_MAX */
+# endif /* FD_MAX */
 
-/* GNL but ignores Ctrl+D. */
-char	*gnl_ignore_ctrl_d(int fd);
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif /* FD_MAX */
 
-#endif /* GET_NEXT_LINE_H */
+typedef struct s_gnl_buf
+{
+	void	*ptr;
+	size_t	size;
+}	t_gnl_buf;
+
+#endif /* GET_NEXT_LINE_INTERNAL_H */

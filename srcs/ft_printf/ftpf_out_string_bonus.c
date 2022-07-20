@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_string.h"
 
 static void	ftpf_string_countlen(size_t len, t_ftpf *param)
 {

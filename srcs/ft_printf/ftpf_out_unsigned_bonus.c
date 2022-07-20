@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_int.h"
 
 static void	ftpf_out_unsigned_2(t_ftpf *param, int base, int cap);
 

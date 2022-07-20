@@ -14,7 +14,6 @@
 # define FT_APULONG_H
 
 # include <limits.h>
-# include "ft_mem.h"
 
 # ifndef FT_APULONG_SIZE
 #  define FT_APULONG_SIZE 64

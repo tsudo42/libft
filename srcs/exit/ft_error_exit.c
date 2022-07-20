@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 
 #include "ft_exit.h"
+#include "ft_put.h"
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 void	ft_error_exit(int exit_no, const char *msg_prefix, int errno)
 {

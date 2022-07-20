@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_exit.h"
+#include <stdlib.h>
 
 void	*ft_wrapped_malloc(size_t size, int exit_no, const char *err_msg)
 {

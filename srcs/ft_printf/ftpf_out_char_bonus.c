@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include <wchar.h>
 
 static void	ftpf_wc(t_ftpf *param)
 {

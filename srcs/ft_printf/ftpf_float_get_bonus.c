@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_string.h"
+#include "ft_mem.h"
 
 static void	ftpf_dbl_getdata_helper(t_ftpf_float *fl, int exp)
 {

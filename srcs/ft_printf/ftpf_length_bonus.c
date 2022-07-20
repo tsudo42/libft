@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
 
 static void	ftpf_length_2(t_ftpf *param);
 

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_int.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This function returns the length of LIS;Longest Increasing Subsequence.   */

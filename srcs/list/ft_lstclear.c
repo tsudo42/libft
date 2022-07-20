@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This function deletes and frees the given element and every successor     */

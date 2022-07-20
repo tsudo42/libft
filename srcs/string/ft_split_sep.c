@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This helper function allocates (with malloc(3)) and returns an array of   */

@@ -11,6 +11,11 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "get_next_line_internal.h"
+#include <ft_string.h>
+#include <ft_mem.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 static char	*gnl_popall(t_gnl_buf *buf)
 {

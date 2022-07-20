@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_int.h"
+#include "ft_char.h"
+#include "ft_string.h"
 
 /* ************************************************************************** */
 /*  This function checks if arg#1 is representation of int.                   */

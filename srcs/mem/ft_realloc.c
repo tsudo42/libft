@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_mem.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  ft_realloc creates a new allocation, copies as much of the old data       */

@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_int.h"
 
 static intmax_t	ftpf_signed_getarg(t_ftpf *param)
 {

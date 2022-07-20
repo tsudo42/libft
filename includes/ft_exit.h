@@ -13,10 +13,8 @@
 #ifndef FT_EXIT_H
 # define FT_EXIT_H
 
-# include <string.h>
-# include <stdlib.h>
-# include <limits.h>
-# include "ft_put.h"
+# include <errno.h>
+# include <stddef.h>
 
 void		ft_exit(int exit_no, const char *err_msg);
 void		ft_error_exit(int exit_no, const char *msg_prefix, int errno);

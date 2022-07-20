@@ -13,8 +13,7 @@
 #ifndef FT_STRING_H
 # define FT_STRING_H
 
-# include <stdlib.h>
-# include <limits.h>
+# include <stddef.h>
 
 char	**ft_split(char const *s, char c);
 char	**ft_split_sep(const char *s, const char *sep);

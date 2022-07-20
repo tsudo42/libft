@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_mem.h"
+#include <unistd.h>
 
 int	ftpf_write(const void *buf, size_t nbyte, t_ftpf *param)
 {

@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <limits.h>
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  Applies the function f to each character of the string s to create a new  */

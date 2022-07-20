@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This function duplicates s1 with allocating memory with malloc(3).        */

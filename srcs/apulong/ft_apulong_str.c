@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_apulong.h"
+#include "ft_mem.h"
 
 /* 20 * FT_APULONG_SIZE <= \log_{10} (2^{64 * FT_APULONG_SIZE} - 1) */
 const char	*ft_apulong_str(t_ft_apulong a, char *str)

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_int.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This helper function returns the minimum length to represent int n in     */

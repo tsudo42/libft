@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This function takes as a parameter an element and frees the memory of     */

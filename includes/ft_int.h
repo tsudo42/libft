@@ -14,11 +14,8 @@
 # define FT_INT_H
 
 # include <limits.h>
+# include <stddef.h>
 # include <stdint.h>
-# include <stdlib.h>
-# include "ft_char.h"
-# include "ft_mem.h"
-# include "ft_string.h"
 
 int				ft_atoi(const char *str);
 void			ft_heapify_int(int *lst, int size);

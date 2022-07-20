@@ -13,8 +13,7 @@
 #ifndef FT_PUT_H
 # define FT_PUT_H
 
-# include "stdlib.h"
-# include "unistd.h"
+# include <stddef.h>
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(const char *s, int fd);

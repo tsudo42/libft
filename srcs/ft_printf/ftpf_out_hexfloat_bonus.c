@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
 
 void	ftpf_out_hexfloat(t_ftpf *param)
 {

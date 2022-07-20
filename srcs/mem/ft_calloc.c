@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_mem.h"
+#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This function allocates memory with its size of count*size, set 0 to the  */

@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_string.h"
 
 void	ftpf_type(t_ftpf *param)
 {

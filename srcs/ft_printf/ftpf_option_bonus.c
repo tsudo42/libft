@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_printf_internal.h"
+#include "ft_char.h"
+#include "ft_int.h"
+#include "ft_string.h"
 
 static void	ftpf_option_minfield(t_ftpf *param)
 {

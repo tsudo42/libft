@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_exit.h"
+#include "ft_put.h"
+#include <stdlib.h>
 
 void	ft_exit(int exit_no, const char *err_msg)
 {
