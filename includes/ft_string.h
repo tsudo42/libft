@@ -18,6 +18,7 @@
 char	**ft_split(char const *s, char c);
 char	**ft_split_sep(const char *s, const char *sep);
 char	*ft_strchr(const char *s, int c);
+int		ft_strcmp(const char *s1, const char *s2);
 size_t	ft_strcspn(const char *s, const char *charset);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

@@ -104,6 +104,7 @@ SRCS_LIST		:= \
 	srcs/list/ft_lstiter.c \
 	srcs/list/ft_lstlast.c \
 	srcs/list/ft_lstmap.c \
+	srcs/list/ft_lstmsort.c \
 	srcs/list/ft_lstnew.c \
 	srcs/list/ft_lstsize.c \
 
@@ -132,6 +133,7 @@ SRCS_STRING		:= \
 	srcs/string/ft_split.c \
 	srcs/string/ft_split_sep.c \
 	srcs/string/ft_strchr.c \
+	srcs/string/ft_strcmp.c \
 	srcs/string/ft_strcspn.c \
 	srcs/string/ft_strdup.c \
 	srcs/string/ft_striteri.c \
