@@ -144,6 +144,7 @@ SRCS_STRING		:= \
 	srcs/string/ft_strlen.c \
 	srcs/string/ft_strmapi.c \
 	srcs/string/ft_strncmp.c \
+	srcs/string/ft_strndup.c \
 	srcs/string/ft_strnlen.c \
 	srcs/string/ft_strnstr.c \
 	srcs/string/ft_strrchr.c \
