@@ -84,8 +84,10 @@ SRCS_INT		:= \
 	srcs/int/ft_heapify_int.c \
 	srcs/int/ft_heapsort_int.c \
 	srcs/int/ft_index.c \
+	srcs/int/ft_intlen.c \
 	srcs/int/ft_isintstr.c \
 	srcs/int/ft_itoa.c \
+	srcs/int/ft_itoa_buf.c \
 	srcs/int/ft_lis_len.c \
 	srcs/int/ft_lowerbound_int.c \
 	srcs/int/ft_nbrlen.c \

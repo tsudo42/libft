@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_buf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsudo <tsudo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_int.h"
-#include <stdlib.h>
 
 /* ************************************************************************** */
 /*  This helper function swaps memory range [left, right].                    */
@@ -34,20 +33,20 @@ static void	*ft_memswap(void *left, void *right)
 }
 
 /* ************************************************************************** */
-/*  This function allocates (with malloc(3)) and returns a string             */
-/*  representing the integer received as an argument.                         */
+/*  This function takes buffer as argument and returns a string representing  */
+/*  the integer received as an argument.                                      */
+/*  If buffer is too small, this function returns NULL.                       */
+/*  Almost same algorithm as ft_itoa.                                         */
 /* ************************************************************************** */
-char	*ft_itoa(int n)
+char	*ft_itoa_buf(int n, char *buf, size_t buflen)
 {
 	char	*left;
 	char	*right;
-	char	*ptr;
 
-	ptr = (char *)malloc(sizeof(char) * (ft_intlen(n) + 1));
-	if (ptr == NULL)
+	if (buf == NULL || buflen < ft_intlen(n) + 1)
 		return (NULL);
-	left = ptr;
-	right = ptr;
+	left = buf;
+	right = buf;
 	if (n <= 0)
 	{
 		*left++ = "0-"[n < 0];
@@ -60,11 +59,5 @@ char	*ft_itoa(int n)
 	}
 	*right-- = '\0';
 	ft_memswap(left, right);
-	return (ptr);
+	return (buf);
 }
-
-/* ************************************************************************** */
-/*  left points the first character of digits, right points the last.         */
-/* ************************************************************************** */
-/*  (n % 10) * (1 - 2 * (n < 0)) + '0' means the last character of signed n.  */
-/* ************************************************************************** */
