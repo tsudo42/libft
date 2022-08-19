@@ -13,8 +13,11 @@
 #include "ft_apulong.h"
 
 /* assume ULONG_MAX + 1 == 18446744073709551616  */
-/* assume n * (ULONG_MAX + 1) / 10 == 6 */
-/* assume n * (ULONG_MAX + 1) % 10 == 1844674407370955161UL */
+/* assume (ULONG_MAX + 1) / 10 == 1844674407370955161UL */
+/* assume (ULONG_MAX + 1) % 10 == 6 */
+/* m * (ULONG_MAX + 1) + n % 10 == (m * 6 + n % 10) % 10 */
+/* m * (ULONG_MAX + 1) + n / 10 == m * 1844674407370955161 + n / 10
+                                 + (m * 6 + n % 10) / 10 */
 t_ft_apulong	ft_apulong_div10(t_ft_apulong a, unsigned long *m)
 {
 	t_ft_apulong	r;
