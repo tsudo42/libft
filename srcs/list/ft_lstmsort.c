@@ -90,10 +90,10 @@ static t_list	*lms_helper(t_list *lst, int (*cmp)(void *, void *))
 	if (size == 2)
 	{
 		if (cmp(lst->content, mid->content) <= 0)
-			return (lst);
-		lst->next = NULL;
-		mid->next = lst;
-		return (mid);
+			ft_lstadd_back(&lst, mid);
+		else
+			ft_lstadd_front(&lst, mid);
+		return (lst);
 	}
 	lst = lms_helper(lst, cmp);
 	mid = lms_helper(mid, cmp);
