@@ -16,6 +16,7 @@
 # include <errno.h>
 # include <stddef.h>
 
+int		ft_dprintf(int fd, const char *fmt, ...);
 int		ft_printf(const char *fmt, ...);
 int		ft_printf_bonus(const char *fmt, ...);
 

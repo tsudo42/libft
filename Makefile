@@ -57,6 +57,7 @@ SRCS_CHAR		:= \
 
 SRCS += $(SRCS_PRINTF)
 SRCS_PRINTF		:= \
+	srcs/ft_printf/ft_dprintf.c \
 	srcs/ft_printf/ft_printf_bonus.c \
 	srcs/ft_printf/ft_printf.c \
 	srcs/ft_printf/ftpf_float_get_bonus.c \
